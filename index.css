@@ -1,0 +1,224 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Inter', sans-serif;
+    line-height: 20px;
+    background-color: #1C1C1C;
+    color: white;
+}
+
+h2 {
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+p {
+    font-size: .75rem;
+}
+
+a {
+    text-decoration: none;
+    border: 1px solid;
+    border-radius: 50px;
+    color: white;
+    align-self: center;
+    padding: 5px 30px;
+}
+
+header {
+    width: 550px;
+    height: 208px;
+    background: url('header.png'),  no-repeat;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.title-search-container {
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+    gap: 0px;
+
+}
+
+.title-watchlist-container {
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+    gap: 0px;
+
+}
+
+.input-search-container {
+    position: absolute;
+    z-index: 1;
+    top: 190px;
+    display: flex;
+    justify-content: center;
+    width: 550px;
+}
+
+.search {
+    width: 316px;
+    padding: 10px;
+    border: none;
+    background-color: #2E2E2F;
+    color: #A5A5A5;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover, 
+input:-webkit-autofill:focus, 
+input:-webkit-autofill:active  {
+  transition: background-color 5000s;
+  -webkit-text-fill-color: #A5A5A5 !important;
+}
+
+button {
+    width: 120px;
+    border: none;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    background-color: #4B4B4B;
+    color: white
+}
+
+#container {
+    width: 550px;
+    /* border: 1px solid; */
+    margin: auto;
+    background-color: #121212;
+    padding: 20px 0;
+    /* height: 100vh; */
+    display: flex;
+    flex-direction: column;
+}
+
+#watchlist-container {
+    width: 550px;
+    /* border: 1px solid; */
+    margin: auto;
+    background-color: #121212;
+    padding: 20px 0;
+    /* height: 100vh; */
+    display: flex;
+    flex-direction: column;
+}
+
+.movie-container {
+    display: flex;
+    margin: 20px auto;
+    /* border: 1px solid; */
+    height: 150px;
+    width: 460px;
+}
+
+/* change name later this is for the watchlist container*/
+#movie-container {
+    display: flex;
+    margin: 20px auto;
+    /* border: 1px solid; */
+    height: 150px;
+    width: 460px;
+}
+
+.movie-details-container {
+    margin-left: 20px;
+    /* border: 1px solid; */
+    width: 100%;
+}
+
+.movie-container img {
+    height: 100%;
+    width: 100%;
+}
+
+/*change name later for watchlist
+this seems to be a culprit and is controlling all the images in the container WTF 
+*/
+#movie-container img {
+    height: 100%;
+    width: 100%;
+}
+
+
+.poster-container {
+    height: 150px;
+    width: 150px;
+    border: 1px solid gree
+}
+
+.title-rating, .time-genre, p, h2 {
+    margin: 0
+}
+
+.title-rating {
+    display: flex;
+    align-items: center;
+    /* border: 1px solid; */
+    margin-top: 10px;
+}
+
+/*this is taking on the watchlist side*/
+.title-rating img {
+    height: 15px;
+    width: 15px;
+    margin-left: 8px;
+}
+
+
+.time-genre {
+    display: flex;
+    /* border: 1px solid; */
+    margin-top: 11px;
+}
+
+hr {
+    width: 460px;
+    border: 1px solid #2C2C2C;
+}
+
+.genre {
+    margin-left: 20px;
+}
+
+.plot {
+    color: #A5A5A5;
+    font-size: .8rem;
+    margin-top: 8px;
+}
+
+.watchlist {
+    margin-left: 5px;
+}
+
+/*not taking on the watchlist side*/
+#plus {
+    height: 16px;
+    width: 16px;
+    margin-left: 30px;
+}
+
+#minus {
+   height: 16px;
+   width: 16px; 
+   margin-left: 30px;
+   
+}
+
+.start-exploring-img {
+    height: 100px;
+    margin-top: 200px;
+    margin-bottom: 200px;
+    
+}
+
+.addedToWl {
+    margin-left: 5px;
+    display: none;
+}
+
