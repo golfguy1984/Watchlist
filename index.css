@@ -197,13 +197,13 @@ hr {
 }
 
 /*not taking on the watchlist side*/
-#plus {
+.plus {
     height: 16px;
     width: 16px;
     margin-left: 30px;
 }
 
-#minus {
+.minus {
    height: 16px;
    width: 16px; 
    margin-left: 30px;
