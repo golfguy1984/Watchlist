@@ -6,6 +6,7 @@ const watchlistContainer = document.getElementById('watchlist-container')
 let watchListArray = JSON.parse(localStorage.getItem("watchListArray")) || []
 let searchResults = JSON.parse(localStorage.getItem("searchResults")) || []
 
+// console.log(watchListArray)
 
 
 
@@ -38,7 +39,13 @@ if (document.contains(document.getElementById('container'))) {
 // it works now just doesnt refresh immediately 
 if (document.contains(document.getElementById('watchlist-container'))) {
     document.addEventListener('click', deleteFromWatchlist)
-    myFunction()
+    
+    if (watchListArray.length !== 0) {
+        watchlistContainer.innerHTML = ''
+        myFunction()
+    } else {
+        watchlistContainer.innerHTML = `<h4 id="empty-text">Your Watchlist is looking a little empty...</h4>`
+    }
     
     function deleteFromWatchlist(e) {
         if(e.target.matches('.minus')) {
@@ -47,18 +54,20 @@ if (document.contains(document.getElementById('watchlist-container'))) {
             let index = watchListArray.indexOf(movieToDelete)
             watchListArray.splice(index, 1)
             localStorage.setItem("watchListArray", JSON.stringify(watchListArray))
-            myFunction()
-            console.log(watchListArray)
-            //rerender the page with the items still left
+            // i feel like it has to go here
+            if (watchListArray.length === 0) {
+                watchlistContainer.innerHTML = `<h4 id="empty-text">Your Watchlist is looking a little empty...</h4>`
+            } else {
+                watchlistContainer.innerHTML = ''
+                myFunction()
+
+            }
+            // check if watch array has any items - if yes then display them and remove the placeholder text if no keep placeholder text
         }
 }
 }
 
 
-
-
-// get the div of the selected watchlist item
-// remove it from localstoraage 
 
 btn.addEventListener('click', () => {
     searchResults = []
@@ -110,7 +119,7 @@ function addResult(movieInfo) {
                 <div class="time-genre">
                     <p class="time">${movie.Runtime}</p>
                     <p class="genre">${movie.Genre}</p>
-                    <img class= "plus" id=${movie.imdbID} src="plus.svg" />
+                    <img class="plus" id=${movie.imdbID} src="./plus-icon.png" />
                     <p class="watchlist">Watchlist</p>
                 </div>
                 <p class="plot">${movie.Plot}</p>
@@ -119,21 +128,15 @@ function addResult(movieInfo) {
         <hr/>
         `
     }
-    container.innerHTML += html
-    
-    //this does nothing at the moment
-    // const minusIcon = document.querySelectorAll('#minus')
-    // for (let icon of minusIcon) {
-    //     icon.style.display = 'none'
-    // }   
+    container.innerHTML += html 
 }
 
 
 
 
 function myFunction() {
-    // let watchlist = JSON.parse(localStorage.getItem("watchListArray"))
-    
+
+
     let html = ""
     for (let movie of watchListArray) {  
             html += `

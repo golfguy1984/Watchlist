@@ -177,6 +177,13 @@ this seems to be a culprit and is controlling all the images in the container WT
     margin-top: 11px;
 }
 
+.time-genre img {
+    height: 16px;
+    width: 16px;
+    margin-left: 30px;
+    
+}
+
 hr {
     width: 460px;
     border: 1px solid #2C2C2C;
@@ -220,5 +227,11 @@ hr {
 .addedToWl {
     margin-left: 5px;
     display: none;
+}
+
+#empty-text {
+    margin-top: 200px;
+    margin-bottom: 200px;
+    text-align: center;
 }
 
