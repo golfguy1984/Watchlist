@@ -5,6 +5,7 @@ html, body {
     line-height: 20px;
     background-color: #1C1C1C;
     color: white;
+    overflow-x: hidden;
 }
 
 h2 {
@@ -26,7 +27,7 @@ a {
 }
 
 header {
-    width: 550px;
+    max-width: 550px;
     height: 208px;
     background: url('header.png'),  no-repeat;
     margin: auto;
@@ -57,7 +58,7 @@ header {
     top: 190px;
     display: flex;
     justify-content: center;
-    width: 550px;
+    max-width: 350px;
 }
 
 .search {
@@ -88,23 +89,23 @@ button {
 }
 
 #container {
-    width: 550px;
+    max-width: 550px;
     /* border: 1px solid; */
     margin: auto;
     background-color: #121212;
     padding: 20px 0;
-    /* height: 100vh; */
+    min-height: 100vh;
     display: flex;
     flex-direction: column;
 }
 
 #watchlist-container {
-    width: 550px;
+    max-width: 550px;
     /* border: 1px solid; */
     margin: auto;
     background-color: #121212;
     padding: 20px 0;
-    /* height: 100vh; */
+    min-height: 100vh;
     display: flex;
     flex-direction: column;
 }
@@ -113,8 +114,8 @@ button {
     display: flex;
     margin: 20px auto;
     /* border: 1px solid; */
-    height: 150px;
-    width: 460px;
+    /* height: 150px; */
+    max-width: 360px;
 }
 
 /* change name later this is for the watchlist container*/
@@ -122,8 +123,8 @@ button {
     display: flex;
     margin: 20px auto;
     /* border: 1px solid; */
-    height: 150px;
-    width: 460px;
+    /* height: 150px; */
+    max-width: 360px;
 }
 
 .movie-details-container {
